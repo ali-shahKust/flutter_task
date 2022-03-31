@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_task/data/ui/login/login_screen.dart';
+import 'package:flutter_task/data/ui/login/login_vm.dart';
 import 'package:provider/provider.dart';
 
 import '../ui/splash/splash_screen.dart';
@@ -9,7 +11,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case SplashScreen.routeName:
       return MaterialPageRoute(
           builder: (context) => ChangeNotifierProvider(
-              create: (context) => SplashVm(), child: SplashScreen()));
+              create: (context) => SplashVm(), child: SplashScreen()),);
+    case LoginScreen.routeName:
+      return MaterialPageRoute(
+          builder: (context) => ChangeNotifierProvider(
+              create: (context) => LoginVm(), child: LoginScreen()));
 
 
 
