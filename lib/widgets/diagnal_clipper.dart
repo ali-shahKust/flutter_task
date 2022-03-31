@@ -24,7 +24,6 @@ class _CustomLoginContainerState extends State<CustomLoginContainer> {
           color: Colors.white,
         ),
         child: widget.child),
-
       );
   }
 }
