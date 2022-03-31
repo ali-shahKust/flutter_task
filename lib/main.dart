@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_task/data/api_client.dart';
+import 'package:get_it/get_it.dart';
 
 import 'data/route/route.dart';
 
-void main() {
+void main() async{
+  GetIt.I.registerSingleton<ApiClient>(ApiClient());
+
+  await GetIt.I.allReady();
+
   runApp(const MyApp());
 }
 
