@@ -10,4 +10,9 @@ class ApiClient {
 
     return response;
   }
+  Future<Response> profile({required String id})async{
+    Response response =await _dio.get("https://reqres.in/api/users/$id");
+
+    return response;
+  }
 }

@@ -9,5 +9,10 @@ class LoginRepoImp extends LoginRepo{
     return await repo.login(email: email, passwrod: password);
   }
 
+  @override
+  Future<Response> getData({required String id}) async{
+    return await repo.profile(id: id);
+  }
+
 
 }

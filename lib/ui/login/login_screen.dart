@@ -2,8 +2,9 @@ import 'package:animated_widgets/animated_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:flutter_task/data/ui/login/login_vm.dart';
-import 'package:flutter_task/data/ui/sign_up/sign_up_screen.dart';
+import 'package:flutter_task/ui/login/login_vm.dart';
+import 'package:flutter_task/ui/sign_up/sign_up_screen.dart';
+
 import 'package:flutter_task/utills/iutills.dart';
 import 'package:flutter_task/widgets/background_widget.dart';
 import 'package:flutter_task/widgets/primary_text.dart';

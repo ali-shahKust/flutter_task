@@ -2,11 +2,13 @@ import 'dart:async';
 
 import 'package:animated_widgets/widgets/translation_animated.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_task/data/ui/login/login_screen.dart';
-import 'package:flutter_task/data/ui/splash/splash_vm.dart';
+import 'package:flutter_task/ui/splash/splash_vm.dart';
+
 import 'package:flutter_task/utills/iutills.dart';
 import 'package:flutter_task/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
+
+import '../login/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String routeName = '/';
