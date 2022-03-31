@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_task/data/ui/login/login_screen.dart';
 import 'package:flutter_task/data/ui/login/login_vm.dart';
+import 'package:flutter_task/data/ui/sign_up/sign_up_screen.dart';
+import 'package:flutter_task/data/ui/sign_up/sign_up_vm.dart';
 import 'package:provider/provider.dart';
 
 import '../ui/splash/splash_screen.dart';
@@ -16,7 +18,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
           builder: (context) => ChangeNotifierProvider(
               create: (context) => LoginVm(), child: LoginScreen()));
-
+    case SignUpScreen.routeName:
+      return MaterialPageRoute(
+          builder: (context) => ChangeNotifierProvider(
+              create: (context) => SignUpVm(), child: SignUpScreen()));
 
 
     default:

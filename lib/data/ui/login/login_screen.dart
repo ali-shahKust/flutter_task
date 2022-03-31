@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:flutter_task/data/ui/sign_up/sign_up_screen.dart';
 import 'package:flutter_task/utills/iutills.dart';
 import 'package:flutter_task/widgets/background_widget.dart';
 import 'package:flutter_task/widgets/primary_text.dart';
@@ -67,7 +68,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: MaterialButton(
                       color: Colors.pinkAccent,
                       shape: CircleBorder(),
-                      onPressed: () {}, child: Icon(Icons
+                      onPressed: () {
+                        Navigator.pushNamed(context,SignUpScreen.routeName);
+                      }, child: Icon(Icons
                       .arrow_downward, color: Colors.white,)),
                 ),
               ),
