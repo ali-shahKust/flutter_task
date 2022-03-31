@@ -44,8 +44,9 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
                         begin: Alignment.topRight,
                         end: Alignment.bottomLeft,
                         colors: [
-                          Colors.grey,
+
                           primaryColor,
+                          secondaryColor
 
                         ],
                       )
@@ -69,9 +70,8 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
                     colors: [
-                      Colors.grey,
                       primaryColor,
-
+                      secondaryColor
                     ],
                   )
               ),

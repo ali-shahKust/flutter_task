@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_task/data/api_client.dart';
+import 'package:flutter_task/data/repo/login/login_repo.dart';
+import 'package:flutter_task/data/repo/login/login_repo_imp.dart';
 import 'package:get_it/get_it.dart';
 
 import 'data/route/route.dart';
 
 void main() async{
   GetIt.I.registerSingleton<ApiClient>(ApiClient());
+  GetIt.I.registerSingleton<LoginRepo>(LoginRepoImp());
+
 
   await GetIt.I.allReady();
 
@@ -21,6 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xffF9F9F9),
         primarySwatch: Colors.blue,
         pageTransitionsTheme: const PageTransitionsTheme(builders: {TargetPlatform.android: CupertinoPageTransitionsBuilder(),}),
 
