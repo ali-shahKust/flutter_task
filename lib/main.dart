@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_task/data/api_client.dart';
 import 'package:flutter_task/data/model/AppModel.dart';
 import 'package:flutter_task/data/repo/login/login_repo.dart';
@@ -9,6 +10,7 @@ import 'package:provider/provider.dart';
 import 'data/route/route.dart';
 
 void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
   GetIt.I.registerSingleton<ApiClient>(ApiClient());
   GetIt.I.registerSingleton<AppModel>(AppModel());
 
@@ -16,8 +18,10 @@ void main() async{
 
 
   await GetIt.I.allReady();
-
-  runApp(const MyApp());
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {
